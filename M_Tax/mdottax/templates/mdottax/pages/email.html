@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thank You for Your Inquiry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>Thank You for Your Inquiry</h2>
+        <p>Dear <strong> {{name }}</strong>,</p>
+        <p>Thank you for reaching out to us! We’ve received your inquiry, and we’re thrilled to assist you with your questions. We appreciate your interest in our services.</p>
+        
+        <h3>Your Query Details:</h3>
+        <ul>
+            <li><strong>Name:</strong> {{name }}</li>
+            <li><strong>Email:</strong> {{email }}</li>
+            <li><strong>Phone Number:</strong> {{mobile }}</li>
+            <li><strong>Message:</strong> {{message }}</li>
+        </ul>
+
+        <p>Our team is currently reviewing your query and will get back to you as soon as possible. If your inquiry requires urgent attention, please feel free to contact us directly at <a href="tel:[Phone Number]">[Phone Number]</a> or reply to this email.</p>
+        <p>We aim to respond to all inquiries within [Insert time frame, e.g., 24-48 hours]. If you need immediate assistance, please don’t hesitate to call us at <a href="tel:[Phone Number]">[Phone Number]</a>.</p>
+
+        <p>Thank you again for reaching out to us. We look forward to assisting you further!</p>
+
+        <p>Best regards,</p>
+        <p><strong>Mahalakha Feroze</strong><br>
+            AquickTax<br>
+           <a href="[Business Website]">AquickTax</a><br>
+           <a href="tel:[Phone Number]">[Phone Number]</a>
+        </p>
+    </div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,141 @@
+{% extends './base.html' %}
+
+{% load static %}
+
+
+{% block title %} 
+A-QuickTax Income Tax Service   
+                
+{% endblock %}
+
+{% block content%}
+
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="row">
+        <div class="col  my-5">
+          <h3 class="fs-1 fw-bold animated slideInDown">Income Tax Services</h3>
+        </div>
+      </div>
+    </div>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <p>Navigating the complexities of Income taxes is crucial for financial health and compliance. At
+            <strong>A-QuickTax</strong>, If you are a US Expat, you must file personal taxes no matter where in the world you reside. All <strong>US citizens and Green Card holders</strong> 
+            need to file an annual tax return reporting their worldwide income if they meet the minimum filing thresholds. But don't worry, 
+            most expats end up paying very little to nothing when returns are prepared correctly and with all the tax savings deductions available to them.</p>
+          <p> You have a US tax filing requirement if you have <strong>income from the US but do not meet the substantial presence test, which would require a U.S. Resident tax 
+            return,
+             or if you were engaged in a trade or business in the United States </strong>
+             during the calendar year; even if this generated no income, or if the income is exempt from US tax under a tax treaty or any section of the Internal Revenue Code</p>
+          <p>Contact us today to learn more about how our Business Tax services can benefit your organization.</p>
+
+          <div class="container border">
+            <div class="row">
+              <div class="col-lg-12">
+                <h2>Our Income Tax Preparation Offers</h2>
+
+                <table class="pricing-table">
+                  <thead>
+                    <tr>
+                      <th>Service</th>
+                      <th>Turnaround Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="highlight">Individual Tax ,Resident and Non-Resident </td>
+                      <td>1-5 Days</td>
+                    </tr>
+                    <!-- Add more rows for additional services if needed -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row my-5">
+              <h1>FORMS PREPARED WITH YOUR RETURN</h1>
+              <div class="col-lg-12">
+                <ul>
+                  <li><i class="fas fa-file-alt"></i> Individual Federal Forms 1040 and 1040NR (A, EZ, or X, as needed)</li>
+                  <li><i class="fas fa-file-signature"></i> Schedule A – Itemized Deductions</li>
+                  <li><i class="fas fa-file-invoice-dollar"></i>  Schedule B – Interest/ Dividends</li>
+                  <li><i class="fas fa-briefcase"></i>  Schedule C – Profit/Loss from a Small Business</li>
+                  <li><i class="fas fa-chart-line"></i> Schedule D – Capital Gains/Losses</li>
+                  <li><i class="fas fa-home"></i> Schedule E—Rental Property/K-1’s</li>
+                  <li><i class="fas fa-money-bill-alt"></i> Schedule EIC – Earned Income Credit</li>
+                  <li><i class="fas fa-seedling"></i> Schedule F – Farm Income/Loss</li>
+                  <li><i class="fas fa-users"></i>  Schedule H – Household Employee</li>
+                  <li><i class="fas fa-user-tie"></i> Schedule SE – Self-Employment Tax</li>
+                  <li><i class="fas fa-file-export"></i>  IRS Form 1116 – Foreign Tax Credit</li>
+                  <li><i class="fas fa-globe-americas"></i> IRS Form 2555 – Foreign Income Exclusion</li>
+                  <li><i class="fas fa-file-alt"></i> All other related forms from #1099-9465</li>
+              </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <img src="{% static 'images/income_tax_service_img.png' %}" class="d-block w-100 h-100 blurred-bg" alt="...">
+        </div>
+      </div>
+    </div>
+   
+    <div class="container text-bg-secondary p-3">
+      <div class="row">
+        <div class="col-12">
+          <p class="highlight text-center">
+            <strong>Get Started Today:</strong> Ready to take the stress out of managing your finances? 
+            <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> 
+            or Call us 
+            <a class="btn btn-dark" href="tel:407-281-7375">407-281-7375</a> today to schedule a consultation and learn more.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Add custom CSS for responsiveness -->
+    <style>
+      /* Ensure text and buttons are centered and stacked vertically on smaller screens */
+      @media (max-width: 991px) {
+        .highlight {
+          font-size: 1.1rem; /* Adjust text size for readability on small screens */
+        }
+    
+        .btn {
+          width: 100%; /* Make buttons full width on mobile screens */
+          margin-top: 10px; /* Add space between buttons */
+        }
+    
+        .row {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+    
+        .container {
+          padding: 1rem; /* Adjust padding for mobile devices */
+        }
+      }
+    
+      /* For larger screens, keep the original styling */
+      @media (min-width: 992px) {
+        .row {
+          display: flex;
+          justify-content: center;
+        }
+    
+        .btn {
+          width: auto; /* Buttons should be only as wide as their content */
+          margin: 0 5px; /* Provide some space between buttons */
+        }
+      }
+    </style>
+
+  </section>
+
+  {% endblock %}

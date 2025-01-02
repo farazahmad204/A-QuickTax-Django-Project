@@ -1,0 +1,135 @@
+
+
+{% extends './base.html' %}
+
+{% load static %}
+
+
+{% block title %} 
+A-QuickTax Bookeeping Service     
+                
+{% endblock %}
+
+{% block content%}
+
+ 
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="row">
+        <div class="col  my-5">
+          <h3 class="fs-1 fw-bold animated slideInDown">Bookeeping</h3>
+        </div>
+      </div>
+    </div>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <p> Whether you are launching a start-up, small business, or already run an established business, we can offer you a convenient bookkeeping solution. 
+            We provide you the services of qualified, seasoned bookkeepers and accounting professionals. Even if you own an established business and you have in house bookkeeper,
+             it can be said that will be not sufficient. We retain qualified and experienced professionals who deals with multiple clients and analyse latest accounting standards 
+             and GAAPs. This help in develop infrastructure according to competitive market need and to keep pace with the work flow. We provide the most efficient bookkeeping 
+             solutions at cost-effective rates. Our bookkeeping services will help you reduce costs and manage your books efficiently. We work with well-known software programs 
+             like QuickBooks,Peachtree, Sage, Xero, ERP and other locally developed softwares.</p>
+          <p>Contact us today to learn more about how our Business Tax services can benefit your organization.</p>
+
+          <div class="container border">
+            <div class="row">
+              <div class="col-lg-12">
+                <h2>Our Service Preparation Offers</h2>
+
+                <table class="pricing-table">
+                  <thead>
+                    <tr>
+                      <th>Service</th>
+                      <th>Turnaround Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="highlight">Financial Statements,Book keeping, Reconciliations, Inventory Management, Fixed Asset Register</td>
+                      <td>1-5 Days</td>
+                     
+                    </tr>
+                    <!-- Add more rows for additional services if needed -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row my-5">
+              <div class="col-lg-12">
+                <ul>
+                  <li>Book keeping</li>
+                  <li>Reconciliations</li>
+                  <li>Preparation of Accounts</li>
+                  <li>Payroll Management</li>
+                  <li>Inventory Management</li>
+                  <li>Fixed Asset Register</li>
+                  <li>Financial Statements</li>
+              </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <img src="{% static 'images/Bookeeping_service_img.png' %}" class="d-block w-100 h-100 blurred-bg" alt="...">
+        </div>
+      </div>
+    </div>
+    <div class="container text-bg-secondary p-3">
+      <div class="row">
+        <div class="col-12">
+          <p class="highlight text-center">
+            <strong>Get Started Today:</strong> Ready to take the stress out of managing your finances? 
+            <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> 
+            or Call us 
+            <a class="btn btn-dark" href="tel:407-281-7375">407-281-7375</a> today to schedule a consultation and learn more.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Add custom CSS for responsiveness -->
+    <style>
+      /* Ensure text and buttons are centered and stacked vertically on smaller screens */
+      @media (max-width: 991px) {
+        .highlight {
+          font-size: 1.1rem; /* Adjust text size for readability on small screens */
+        }
+    
+        .btn {
+          width: 100%; /* Make buttons full width on mobile screens */
+          margin-top: 10px; /* Add space between buttons */
+        }
+    
+        .row {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+    
+        .container {
+          padding: 1rem; /* Adjust padding for mobile devices */
+        }
+      }
+    
+      /* For larger screens, keep the original styling */
+      @media (min-width: 992px) {
+        .row {
+          display: flex;
+          justify-content: center;
+        }
+    
+        .btn {
+          width: auto; /* Buttons should be only as wide as their content */
+          margin: 0 5px; /* Provide some space between buttons */
+        }
+      }
+    </style>
+  </section>
+
+ 
+  {% endblock %}

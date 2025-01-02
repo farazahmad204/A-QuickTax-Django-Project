@@ -1,0 +1,117 @@
+{% extends './base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+M. Contact us
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<!-- Add some custom CSS for responsiveness -->
+<style>
+  /* Ensure the form takes up the full width on smaller screens */
+  @media (max-width: 991px) {
+    .col-lg-6 {
+      width: 100%;
+      padding: 0 15px;
+    }
+
+    /* Stack the form and message sections vertically on small screens */
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .col-lg-6 {
+      margin-bottom: 30px;
+    }
+
+    /* Make form fields full width on smaller screens */
+    .form-control input,
+    .form-control textarea,
+    .form-control select {
+      width: 100%;
+    }
+
+    /* Adjust the form's submit button on small screens */
+    button[type="submit"] {
+      width: 100%;
+    }
+  }
+
+  /* Ensure the form layout stays side-by-side on larger screens */
+  @media (min-width: 992px) {
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
+</style>
+
+<!-- Contact Section -->
+<section class="contact-section mt-5">
+  
+  <div class="container my-5 me-2 mt-5">
+    <div class="row">
+      <!-- Contact Form Section -->
+      <div class="col-lg-6">
+        <h2>Contact Us</h2>
+        <p>Have a question or want to schedule a consultation? Get in touch with us today!</p>
+        <form method="post" action="{% url 'contact_us' %}">
+          {% csrf_token %}
+          <div class="form-control">
+            {{ form.username }}
+            {{ form.username.errors }}
+          </div>
+          <div class="form-control">
+            {{ form.email }}
+            {{ form.email.errors }}
+          </div>
+          <div class="form-control">
+            {{ form.mobile }}
+            {{ form.mobile.errors }}
+          </div>
+          <div class="form-control">
+            {{ form.message }}
+            {{ form.message.errors }}
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+  
+      <!-- Messages Section -->
+      <div class="col-lg-6 my-5">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-success text-center">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-bg-secondary p-3">
+    <div class="row">
+      <div class="col-12">
+        <p class="highlight text-center">
+          <strong>Get Started Today:</strong> Ready to take the stress out of managing your finances? 
+          <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> 
+          or Call us 
+          <a class="btn btn-dark" href="tel:407-281-7375">407-281-7375</a> today to schedule a consultation and learn more.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,127 @@
+
+
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block title %} 
+A-QuickTax Business Formation and ITIN    
+                
+{% endblock %}
+
+{% block content%}
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="row">
+        <div class="col  my-5">
+          <h3 class="fs-1 fw-bold animated slideInDown">Business Formation and ITIN</h3>
+        </div>
+      </div>
+    </div>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <p>
+
+            At <strong>A-QuickTax</strong>, we specialize in helping entrepreneurs, startups, and foreign nationals navigate the complexities of Business Formation and ITIN 
+            (Individual Taxpayer Identification Number) applications. Whether you're launching your business in the U.S. or need tax assistance for non-residents, 
+            we provide a seamless process to ensure you're set up for success.</p>
+
+
+            <p>Starting a business can be overwhelming, but we are here to guide you every step of the way. We offer professional business formation services, 
+              helping you choose the best legal structure and ensuring all the necessary paperwork is filed with the state. Whether you're looking to establish 
+              a <strong>Sole Proprietorship</strong>, <strong>LLC</strong>, <strong>Corporation</strong>, or a <strong>Partnership</strong>, 
+              our team will assist you in selecting the right option for your goals.</p>
+
+
+            <p>If you are a foreign national, non-resident, or someone who does not qualify for a Social Security Number (SSN), obtaining an Individual Taxpayer
+               Identification Number (ITIN) is essential. An ITIN is required for tax reporting, filing tax returns, and engaging in various financial transactions 
+               in the U.S. Our expert team will guide you through the process, ensuring you meet all the IRS requirements.</p>
+              
+            
+
+          <div class="container border">
+            <div class="row my-3">
+              <div class="col-lg-12">
+                <h3>Our Business Formation Services Include:</h3>
+                <ul>
+                  <li><strong>Business Structure Consultation:</strong> We help you choose the best structure—LLC, Corporation, Partnership, or Sole Proprietorship—based on your needs and goals.</li>
+                  <li><strong>State Registration:</strong> We handle the filing of the necessary documents, including Articles of Incorporation or Operating Agreements, with the state of your choice.</li>
+                  <li><strong>EIN Application:</strong> We apply for an Employer Identification Number (EIN) to set up your business for tax purposes.</li>
+                  <li><strong>Registered Agent Services:</strong> We act as your Registered Agent to receive official correspondence from the state.</li>
+                  <li><strong>Business Licenses & Permits:</strong> We help you obtain any required local, state, or federal licenses to operate legally.</li>
+                </ul>
+        
+                <h3>Our ITIN Services Include:</h3>
+                <ul>
+                  <li><strong>ITIN Application Assistance:</strong> We help you complete IRS Form W-7, the required application for an ITIN.</li>
+                  <li><strong>Document Preparation:</strong> We assist in gathering the necessary documents (e.g., passport, visa, or tax return) to submit with your application.</li>
+                  <li><strong>Submission to IRS:</strong> We handle the submission of your application to the IRS and ensure timely processing.</li>
+                  <li><strong>Renewal Services:</strong> If you need to renew your ITIN, we can assist with the process to keep your tax records up to date.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="{% static 'images/business_formation_and_ITIN_img.png' %}" class="d-block w-100 h-50 blurred-bg" alt="...">
+
+        </div>
+      </div>
+    </div>
+    <div class="container text-bg-secondary p-3">
+      <div class="row">
+        <div class="col-12">
+          <p class="highlight text-center">
+            <strong>Get Started Today:</strong> Ready to take the stress out of managing your finances? 
+            <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> 
+            or Call us 
+            <a class="btn btn-dark" href="tel:407-281-7375">407-281-7375</a> today to schedule a consultation and learn more.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Add custom CSS for responsiveness -->
+    <style>
+      /* Ensure text and buttons are centered and stacked vertically on smaller screens */
+      @media (max-width: 991px) {
+        .highlight {
+          font-size: 1.1rem; /* Adjust text size for readability on small screens */
+        }
+    
+        .btn {
+          width: 100%; /* Make buttons full width on mobile screens */
+          margin-top: 10px; /* Add space between buttons */
+        }
+    
+        .row {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+    
+        .container {
+          padding: 1rem; /* Adjust padding for mobile devices */
+        }
+      }
+    
+      /* For larger screens, keep the original styling */
+      @media (min-width: 992px) {
+        .row {
+          display: flex;
+          justify-content: center;
+        }
+    
+        .btn {
+          width: auto; /* Buttons should be only as wide as their content */
+          margin: 0 5px; /* Provide some space between buttons */
+        }
+      }
+    </style>
+
+  </section>
+
+  {% endblock %}
