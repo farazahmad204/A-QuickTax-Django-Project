@@ -9,6 +9,8 @@ from django.utils.text import slugify
 from django.db import IntegrityError
 
 
+EMAIL_HOST_USER = 'Admin@aquicktax.com'
+
 username = None
 user_message=None
 user_mobile=None
@@ -38,27 +40,18 @@ def send_emails(request, user_email='None'):
     try:
         emails = Mail.objects.values_list('email', flat=True)  # Get all emails from Mail model
         subject = 'Thank You for Your Inquiry - We’re Here to Help!'
-
-        for email in emails:
-            if email == user_email:
-                # Get the data for the specific email (user email)
-                all_values = Mail.objects.filter(email=user_email).values()
-                if not all_values:
-                    raise ValueError(f"No data found for email: {user_email}")
-
-                # Render HTML email content using the provided template
-                message_html = render_to_string('mdottax/pages/email.html', {
-                    'all_values': all_values,
-                    'subject': subject,
-                    'message': user_message,
-                    'name': username,
-                    'mobile':user_mobile,
-                    'email':user_email
-
-                })
-
-                # Send the email
-                send_mail(subject, user_message, None, [email], html_message=message_html)
+        # Render HTML email content using the provided template
+        message_html = render_to_string('mdottax/pages/email.html', {
+        'subject': subject,
+        'message': user_message,
+        'name': username,
+        'mobile':user_mobile,
+        'email':user_email
+        })
+        
+        # Send the email
+        send_mail(subject, user_message, EMAIL_HOST_USER, [user_email,'Admin@aquicktax.com'], html_message=message_html)
+               
 
     except Exception as e:
         print(f"Error while sending emails: {e}")
@@ -100,7 +93,6 @@ def contact_us(request):
 
                 # Call function to send email
                 send_emails(request, user_email)
-
                 # Redirect to a success page
                 return redirect('contact_us')
 

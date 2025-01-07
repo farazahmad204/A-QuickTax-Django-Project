@@ -19,6 +19,9 @@
 
   <!--Font Awesome CSS file -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+
   <!-- Custom CSS
   <link href="styles.css" rel="stylesheet"> -->
   <style>
@@ -111,8 +114,40 @@
       .navbar-nav {
           text-align: left;  /* Align navbar items to the left */
       }
+      .highlight {
+        font-size: 1.1rem; /* Adjust text size for readability on small screens */
+      }
+  
+      .btn {
+        width: 100%; /* Make buttons full width on mobile screens */
+        margin-top: 10px; /* Add space between buttons */
+      }
+  
+      .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+  
+      .container {
+        padding: 1rem; /* Adjust padding for mobile devices */
+      }
   }
-</style>
+   
+  
+    /* For larger screens, keep the original styling */
+    @media (min-width: 992px) {
+      .row {
+        display: flex;
+        justify-content: center;
+      }
+  
+      .btn {
+        width: auto; /* Buttons should be only as wide as their content */
+        margin: 0 5px; /* Provide some space between buttons */
+      }
+    }
+  </style>
 
 <div class="container mb-4">
   <!-- Navbar -->
@@ -120,8 +155,8 @@
       <div class="container">
           <!-- Navbar title on the left -->
           <a class="navbar-brand" href="{% url 'home' %}">
-              <img src="{% static 'images/logo.jpg' %}" alt="AMTAXZ" width="80" height="80">
-              <span class="fs-5">A-QuickTax</span> <!-- Add your website title here -->
+              <img src="{% static 'images/logo.png' %}" alt="AMTAXZ" width="100" height="80">
+              <span class="fs-5">A-QuickTax &nbsp; &nbsp;<img src="{% static 'images/usa_flag.JPG' %}" alt="USA Flag" width="30" height="20" /></span> <!-- Add your website title here -->
           </a>
           <!-- Navbar toggle button (burger icon) aligned to the right -->
           <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -142,11 +177,12 @@
                           aria-expanded="false">
                           Our Services
                       </a>
-                      <ul class="dropdown-menu bg-dark">
+                      <ul class="dropdown-menu " style="background-color: #001a33;">
                           <li><a class="dropdown-item" href="{% url 'bookeeping_service' %}">Bookkeeping</a></li>
                           <li><a class="dropdown-item" href="{% url 'business_tax_service' %}">Business Tax</a></li>
                           <li><a class="dropdown-item" href="{% url 'income_tax_service' %}">Income Tax</a></li>
                           <li><a class="dropdown-item" href="{% url 'business_formation_and_ITIN' %}">Business Formation & ITIN </a></li>
+                          <li><a class="dropdown-item" href="{% url 'sales_and_use_tax_Service' %}">Sales and Use Tax Services </a></li>
                       </ul>
                   </li>
                   <li class="nav-item">
@@ -174,8 +210,9 @@
   <!-- Footer -->
   <footer class="footer-expand-lg text-light border my-5" style="background-color: #001a33;">
     <div class="container">
-      <div class="row my-5">
-        <div class="col-sm-4 ">
+      <div class="row  flex-sm-row my-5">
+        <!-- <div class="col-sm-4 "> -->
+          <div class="col-sm-4">
           <h4>Quick Links</h4>
           <ul class="list-unstyled">
             <li><a href="{% url 'home' %}" style="color: #00bfff;"><i class="fas text-light fa-home"></i> Home</a></li>
@@ -187,29 +224,31 @@
                 Contact Us</a></li>
             <!-- Add more quick links as needed -->
           </ul>
-          <img loading="lazy" src="{% static 'images/logo.jpg' %}" alt="SK Certification" style="height: 115px">
+          <img loading="lazy" src="{% static 'images/logo.png' %}" alt="SK Certification" style="height: 115px">
         </div>
 
-        <div class="col-sm-4">
+        <!-- <div class="col-sm-4"> -->
+          <div class="col-sm-4">
           <h4>Connect With Us</h4>
           <ul class="list-unstyled">
             <li>
               <p>A-QuickTax </p>
               <h5 style="color: #a3d2f0;">
-                </pstyle> <i class="fas fa-map-marker-alt "></i> 123 Main Street
-                City, State, ZIP</h5>
-              <p>Email: info@amtaxz.com</p>
-              <p>Phone: 123-456-7890</p>
+                <!-- </pstyle> <i class="fas fa-map-marker-alt "></i> 123 Main Street
+                City, State, ZIP</h5> -->
+              <p>Email: admin@aquicktax.com</p>
+              <p>Phone: 092-329-1974637</p>
             </li>
-            <li>
-              <a href="#" style="color: #3b5998;"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" style="color: #1DA1F2;"><i class="fab fa-twitter"></i></a>
+            <li >
+              <a class="text-white" href="https://www.facebook.com/profile.php?id=61571631929090" style="color: #3b5998;"><i class="fab fa-facebook-f text-white">&nbsp;</i>Follow us on facebook </a>
+              <!-- <a href="#" style="color: #1DA1F2;"><i class="fab fa-twitter"></i></a>
               <a href="#" style="color: #0077B5;"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" style="color: #E4405F;"><i class="fab fa-instagram"></i></a>
+              <a href="#" style="color: #E4405F;"><i class="fab fa-instagram"></i></a> -->
             </li>
           </ul>
         </div>
-        <div class="col-sm-4">
+        <!-- <div class="col-sm-4"> -->
+          <div class="col-sm-4">
           <img loading="lazy" src="{% static 'images/i_tax_img.svg' %}" alt="Tax Image" style="height: 115px">
           <img loading="lazy" src="{% static 'images/b_tax_img.svg' %}" alt="b_tax Image" style="height: 115px">
           <img loading="lazy" src="{% static 'images/bookeeping_img.svg' %}" alt="bookeeping Image"
@@ -243,6 +282,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+   
 
 </body>
 

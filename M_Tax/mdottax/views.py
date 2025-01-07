@@ -48,3 +48,8 @@ def home(request):
 def error(request):
 
     return render(request,'mdottax/pages/error.html')
+
+def salestax(request):
+
+    return render(request,'mdottax/pages/salestax.html')
+    

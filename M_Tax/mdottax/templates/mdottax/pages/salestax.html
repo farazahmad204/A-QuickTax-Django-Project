@@ -1,0 +1,93 @@
+
+
+{% extends './base.html' %}
+
+{% load static %}
+
+
+{% block title %} 
+A-QuickTax Sales and Use Tax Services     
+                
+{% endblock %}
+
+{% block content%}
+
+ 
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="row">
+        <div class="col  my-5">
+          <h3 class="fs-1 fw-bold animated slideInDown">Sales and Use Tax Services</h3>
+        </div>
+      </div>
+    </div>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <p>At <strong>A-QuickTax</strong>, we specialize in providing expert <strong>Sales and Use Tax Services</strong> to help businesses comply with complex state and local tax regulations. Whether you're a small business or a large corporation, our team of experienced professionals will ensure that your sales tax filings are accurate and timely, minimizing the risk of audits, penalties, and fines.</p>
+          
+          <p>Our services are designed to meet the specific needs of your business. From <strong>taxability analysis</strong> to <strong>sales tax compliance</strong>, we offer personalized solutions to help you navigate the intricacies of sales and use taxes. Let us handle your tax obligations so you can focus on growing your business.</p>
+        
+          <div class="container border">
+            <div class="row">
+              <div class="col-lg-12">
+                <h2>Our <strong>Sales and Use Tax Services</strong> Include:</h2>
+        
+                <table class="pricing-table">
+                  <thead>
+                    <tr>
+                      <th>Service</th>
+                      <th>Turnaround Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="highlight"><strong>Taxability Analysis, Sales Tax Nexus Guidance, Audit Support, Sales Tax Filing and Compliance</strong></td>
+                      <td>1-5 Days</td>
+                    </tr>
+                    <!-- Add more rows for additional services if needed -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row my-5">
+              <div class="col-lg-12">
+                <ul>
+                  <li><strong>Sales Tax Filing and Compliance:</strong> We assist with preparing and filing your sales tax returns in full compliance with state and local tax regulations, ensuring your business stays in good standing.</li>
+                  <li><strong>Audit Support:</strong> Facing a sales tax audit? Our experts provide comprehensive support and representation, ensuring your business is fully protected throughout the process.</li>
+                  <li><strong>Sales Tax Nexus Guidance:</strong> Determining where your business has sales tax nexus can be complex. We help identify nexus and ensure that you're compliant with all states where you have a tax obligation.</li>
+                  <li><strong>Use Tax Management:</strong> We assist with use tax issues by ensuring that you're paying the correct taxes on out-of-state purchases, helping to avoid costly mistakes and penalties.</li>
+                  <li><strong>Taxability Analysis:</strong> Our team conducts in-depth analyses to determine which of your products or services are taxable, minimizing the risk of overpayments and reducing your exposure to penalties.</li>
+                  <li><strong>Sales Tax Compliance Monitoring:</strong> We help you keep track of changing tax laws and rates, ensuring your business remains compliant in all relevant jurisdictions.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <img src="{% static 'images/sales_and_use_tax_Service.png' %}" class="d-block w-100 h-100 blurred-bg" alt="...">
+        </div>
+      </div>
+    </div>
+    <div class="container text-bg-secondary p-3">
+      <div class="row">
+        <div class="col-12">
+          <p class="highlight text-center">
+            <strong>Get Started Today:</strong> Ready to take the stress out of managing your finances?
+            <a  class="btn btn-dark" href="mailto:admin@aquicktax.com?subject=Inquiry%20about%20services&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.">Contact us via email</a>
+            or Call us 
+            <a  class="btn btn-dark" href="https://wa.me/0923291974637" target="_blank">Chat with us on WhatsApp!</a> 
+            or send a Query,our team will contact you!
+            <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> 
+            today to schedule a consultation and learn more.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  {% endblock %}

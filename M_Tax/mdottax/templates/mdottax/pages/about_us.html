@@ -52,15 +52,22 @@ A-QuickTax about us
           </div>
         </div>
         <div class="col-lg-6 my-5">
-          <img src="{% static 'images/logo.jpg' %}" class="d-block w-100 h-100 blurred-bg" alt="...">
+          <img src="{% static 'images/logo.png' %}" class="d-block w-100 h-100 blurred-bg" alt="...">
         </div>
       </div>
     </div>
     <div class="container text-bg-secondary p-3">
       <div class="row">
-        <div class="col-lg-12">
-          <p class="highlight text-center"><strong>Get Started Today:</strong> Ready to take the stress out of managing your finances? <a class="btn btn-dark  " href="{% url 'contact_us' %}">Contact us</a> or Call us <a class="btn btn-dark  " href="tel:407-281-7375">407-281-7375</a>
-            today to schedule a consultation and learn more. </p>
+        <div class="col-12">
+          <p class="highlight text-center">
+            <strong>Get Started Today:</strong> Ready to take the stress out of managing your finances?
+            <a  class="btn btn-dark" href="mailto:admin@aquicktax.com?subject=Inquiry%20about%20services&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.">Contact us via email</a>
+            or Call us 
+            <a  class="btn btn-dark" href="https://wa.me/0923291974637" target="_blank">Chat with us on WhatsApp!</a> 
+            or send a Query,our team will contact you!
+            <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> 
+            today to schedule a consultation and learn more.
+          </p>
         </div>
       </div>
     </div>

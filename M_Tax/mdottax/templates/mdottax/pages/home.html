@@ -39,11 +39,13 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="container my-5">
-                    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button> 
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button><!-- Add this -->
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -53,7 +55,7 @@
                                     <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Bookkeeping</h3>
                                     <p class="fs-5" style="color: #ddf0f6;">Efficient bookkeeping services ensure accurate financial records and informed business decisions.
                                         <a href="{% url 'bookeeping_service' %}" class="btn btn-light me-2">Learn More</a> 
-                                        <a class="btn btn-secondary me-2" href="tel:407-281-7375">Call us 407-281-7375</a>
+                                        <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on WhatsApp!</a> 
                                     </p>
                                 </div>
                             </div>
@@ -63,8 +65,9 @@
                                 <div class="carousel-caption d-none d-md-block text-success" style="background-color: #001a33;">
                                     <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Business Tax</h3>
                                     <p class="fs-5" style="color: #ddf0f6;">Expert tax consulting and compliance solutions tailored for your business needs.
+                                      <br>
                                         <a href="{% url 'business_tax_service' %}" class="my-2 btn btn-light">Learn More</a> 
-                                        <a class="btn btn-secondary me-2" href="tel:407-281-7375">Call us 407-281-7375</a>
+                                        <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on WhatsApp!</a> 
                                     </p>
                                 </div>
                             </div>
@@ -75,7 +78,7 @@
                                     <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Income Tax</h3>
                                     <p class="fs-5" style="color: #ddf0f6;">Expert income tax services provide tailored solutions for maximizing refunds and minimizing liabilities.
                                         <a href="{% url 'income_tax_service' %}" class="btn btn-light me-2">Learn More</a> 
-                                        <a class="btn btn-secondary me-2" href="tel:407-281-7375">Call us 407-281-7375</a>
+                                        <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on WhatsApp!</a> 
                                     </p>
                                 </div>
                             </div>
@@ -85,11 +88,22 @@
                               <div class="carousel-caption d-none d-md-block text-success" style="background-color: #001a33;">
                                   <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Business Formation and ITIN</h3>
                                   <p class="fs-5" style="color: #ddf0f6;">Expert services provide tailored solutions for maximizing refunds and minimizing liabilities.
-                                      <a href="{% url 'income_tax_service' %}" class="btn btn-light me-2">Learn More</a> 
-                                      <a class="btn btn-secondary me-2" href="tel:407-281-7375">Call us 407-281-7375</a>
+                                      <a href="{% url 'business_formation_and_ITIN' %}" class="btn btn-light me-2">Learn More</a> 
+                                      <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on WhatsApp!</a> 
                                   </p>
                               </div>
                           </div>
+                          <div class="carousel-item">
+                            <!-- Show image only on larger screens (desktop, tablet) -->
+                            <img src="{% static 'images/sales_and_use_tax_Service.png' %}" class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
+                            <div class="carousel-caption d-none d-md-block text-success" style="background-color: #001a33;">
+                                <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Sales and Use Tax Services</h3>
+                                <p class="fs-5" style="color: #ddf0f6;">Expert services provide tailored solutions for maximizing refunds and minimizing liabilities.
+                                    <a href="{% url 'sales_and_use_tax_Service' %}" class="btn btn-light me-2">Learn More</a> 
+                                    <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on WhatsApp!</a> 
+                                </p>
+                            </div>
+                        </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -105,7 +119,6 @@
         </div>
     </div>
 </section>
-
 
   <!-- Services Section -->
   <section id="services" class="py-5">
@@ -144,11 +157,21 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="card">
-            <img src="{% static 'images/business_formation_and_ITIN_img.png' %}" class="card-img-top" alt="Service 3 Image">
+            <img src="{% static 'images/business_formation_and_ITIN_img.png' %}" class="card-img-top" alt="Service 4 Image">
             <div class="card-body">
               <h4 class="card-title fw-bold">Business Formation & ITIN</h4>
               <p class="card-text"> Expert income tax services provide tailored solutions for maximizing refunds and minimizing liabilities.</p>
               <a href="{% url 'business_formation_and_ITIN' %}" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="{% static 'images/sales_and_use_tax_Service.png' %}" class="card-img-top" alt="Service 5 Image">
+            <div class="card-body">
+              <h4 class="card-title fw-bold">Sales and Use Tax Services</h4>
+              <p class="card-text"> Expert Sales tax services provide personalized solutions from taxability analysis to sales tax compliance</p>
+              <a href="{% url 'sales_and_use_tax_Service' %}" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
@@ -189,12 +212,12 @@
         <div class="col-lg-12">
           <div class="collaboration-container">
             <h2>Our Collaboration with QuickTax LLC Arizona</h2>
-            <p>We are pleased to announce our strategic partnership with XYZ Accounting & Tax Services to deliver expert financial solutions. Together, 
+            <p>We are pleased to announce our strategic partnership with QuickTax LLC Arizona to deliver expert financial solutions. Together, 
               we are dedicated to providing accurate, reliable, and timely accounting and tax services that meet the unique needs of our clients</p>
             
             <div class="company-logos">
-              <img src="{% static 'images/logo.jpg' %}" alt="Your Company Logo">
-              <img src="{% static 'images/logo.jpg' %}" alt="QuickTax LLC Arizona Logo">
+              <img src="{% static 'images/logo.png' %}" alt="Your Company Logo">
+              <img src="{% static 'images/logo.png' %}" alt="QuickTax LLC Arizona Logo">
             </div>
           </div>
 
