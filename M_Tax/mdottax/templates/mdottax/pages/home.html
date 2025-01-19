@@ -2,9 +2,9 @@
 
 {% load static %}
 
-{% block title %} 
-    A-QuickTax Consultation   
-                
+{% block title %}
+A-QuickTax Consultation
+
 {% endblock %}
 
 {% block content%}
@@ -13,219 +13,295 @@
 <style>
   /* Hide carousel images and adjust height on mobile screens */
   @media (max-width: 991px) {
-      /* Hide the entire carousel on mobile */
-      .carousel-inner {
-          display: none;
-      }
 
-      /* Remove any gap created by the carousel when images are hidden */
-      .hero-section {
-          padding-top: 0; /* Remove any extra padding if there was any before */
-      }
+    /* Hide the entire carousel on mobile */
+    .carousel-inner {
+      display: none;
+    }
+
+    /* Remove any gap created by the carousel when images are hidden */
+    .hero-section {
+      padding-top: 0;
+      /* Remove any extra padding if there was any before */
+    }
   }
 
   /* Ensure carousel items have their height adjusted based on screen size */
   @media (min-width: 992px) {
-      .carousel-inner {
-          display: block;
-      }
+    .carousel-inner {
+      display: block;
+    }
   }
 </style>
 
 
-  <!-- Hero Section -->
-  <section class="hero-section ">
-    <div class="container-fluid ">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="container my-5">
-                    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button> 
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button><!-- Add this -->
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <!-- Show image only on larger screens (desktop, tablet) -->
-                                <img src="{% static 'images/Bookeeping_service_img.png' %}" class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
-                                <div class="carousel-caption d-none d-md-block text-success" style="background-color: #001a33;">
-                                    <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Bookkeeping</h3>
-                                    <p class="fs-5" style="color: #ddf0f6;">Efficient bookkeeping services ensure accurate financial records and informed business decisions.
-                                        <a href="{% url 'bookeeping_service' %}" class="btn btn-light me-2">Learn More</a> 
-                                        <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on WhatsApp!</a> 
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <!-- Show image only on larger screens (desktop, tablet) -->
-                                <img src="{% static 'images/business_tax_service_img.png' %}" class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
-                                <div class="carousel-caption d-none d-md-block text-success" style="background-color: #001a33;">
-                                    <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Business Tax</h3>
-                                    <p class="fs-5" style="color: #ddf0f6;">Expert tax consulting and compliance solutions tailored for your business needs.
-                                      <br>
-                                        <a href="{% url 'business_tax_service' %}" class="my-2 btn btn-light">Learn More</a> 
-                                        <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on WhatsApp!</a> 
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <!-- Show image only on larger screens (desktop, tablet) -->
-                                <img src="{% static 'images/income_tax_service_img.png' %}" class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
-                                <div class="carousel-caption d-none d-md-block text-success" style="background-color: #001a33;">
-                                    <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Income Tax</h3>
-                                    <p class="fs-5" style="color: #ddf0f6;">Expert income tax services provide tailored solutions for maximizing refunds and minimizing liabilities.
-                                        <a href="{% url 'income_tax_service' %}" class="btn btn-light me-2">Learn More</a> 
-                                        <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on WhatsApp!</a> 
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                              <!-- Show image only on larger screens (desktop, tablet) -->
-                              <img src="{% static 'images/income_tax_service_img.png' %}" class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
-                              <div class="carousel-caption d-none d-md-block text-success" style="background-color: #001a33;">
-                                  <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Business Formation and ITIN</h3>
-                                  <p class="fs-5" style="color: #ddf0f6;">Expert services provide tailored solutions for maximizing refunds and minimizing liabilities.
-                                      <a href="{% url 'business_formation_and_ITIN' %}" class="btn btn-light me-2">Learn More</a> 
-                                      <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on WhatsApp!</a> 
-                                  </p>
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                            <!-- Show image only on larger screens (desktop, tablet) -->
-                            <img src="{% static 'images/sales_and_use_tax_Service.png' %}" class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
-                            <div class="carousel-caption d-none d-md-block text-success" style="background-color: #001a33;">
-                                <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Sales and Use Tax Services</h3>
-                                <p class="fs-5" style="color: #ddf0f6;">Expert services provide tailored solutions for maximizing refunds and minimizing liabilities.
-                                    <a href="{% url 'sales_and_use_tax_Service' %}" class="btn btn-light me-2">Learn More</a> 
-                                    <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on WhatsApp!</a> 
-                                </p>
-                            </div>
-                        </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
+<!-- Hero Section -->
+<section class="hero-section ">
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="container my-5">
+          <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
+            data-bs-interval="2000">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                aria-label="Slide 5"></button><!-- Add this -->
             </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <!-- Show image only on larger screens (desktop, tablet) -->
+                <img src="{% static 'images/_old_Bookeeping_service_img.png' %}"
+                  class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
+                <div class="carousel-caption d-none d-md-block text-success" style="background-color: #0e4101;">
+                  <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Bookkeeping</h3>
+                  <p class="fs-5" style="color: #ddf0f6;">Efficient bookkeeping services ensure accurate financial
+                    records and informed business decisions.
+                    <a href="{% url 'bookeeping_service' %}" class="btn btn-light me-2">Learn More</a>
+                    <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on
+                      WhatsApp!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!-- Show image only on larger screens (desktop, tablet) -->
+                <img src="{% static 'images/business_tax_service_img.png' %}"
+                  class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
+                <div class="carousel-caption d-none d-md-block text-success" style="background-color: #0e4101;">
+                  <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Business Tax</h3>
+                  <p class="fs-5" style="color: #ddf0f6;">Expert tax consulting and compliance solutions tailored for
+                    your business needs.
+                    <br>
+                    <a href="{% url 'business_tax_service' %}" class="my-2 btn btn-light">Learn More</a>
+                    <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on
+                      WhatsApp!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!-- Show image only on larger screens (desktop, tablet) -->
+                <img src="{% static 'images/old_income_tax_service_img.png' %}"
+                  class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
+                <div class="carousel-caption d-none d-md-block text-success" style="background-color: #0e4101;">
+                  <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Income Tax</h3>
+                  <p class="fs-5" style="color: #ddf0f6;">Expert income tax services provide tailored solutions for
+                    maximizing refunds and minimizing liabilities.
+                    <a href="{% url 'income_tax_service' %}" class="btn btn-light me-2">Learn More</a>
+                    <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on
+                      WhatsApp!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!-- Show image only on larger screens (desktop, tablet) -->
+                <img src="{% static 'images/old_income_tax_service_img.png' %}"
+                  class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
+                <div class="carousel-caption d-none d-md-block text-success" style="background-color: #0e4101;">
+                  <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Business Formation and ITIN</h3>
+                  <p class="fs-5" style="color: #ddf0f6;">Expert services provide tailored solutions for maximizing
+                    refunds and minimizing liabilities.
+                    <a href="{% url 'business_formation_and_ITIN' %}" class="btn btn-light me-2">Learn More</a>
+                    <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on
+                      WhatsApp!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!-- Show image only on larger screens (desktop, tablet) -->
+                <img src="{% static 'images/old_sales_and_use_tax_Service.png' %}"
+                  class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
+                <div class="carousel-caption d-none d-md-block text-success" style="background-color: #0e4101;">
+                  <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Sales and Use Tax Services</h3>
+                  <p class="fs-5" style="color: #ddf0f6;">Expert services provide tailored solutions for maximizing
+                    refunds and minimizing liabilities.
+                    <a href="{% url 'sales_and_use_tax_Service' %}" class="btn btn-light me-2">Learn More</a>
+                    <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on
+                      WhatsApp!</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
-  <!-- Services Section -->
-  <section id="services" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Our Services</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="{% static 'images/Bookeeping_service_img.png' %}" class="card-img-top" alt="Service 1 Image">
-            <div class="card-body">
-              <h4 class="card-title fw-bold">Bookkeeping</h4>
-              <p class="card-text">Efficient bookkeeping services ensure accurate financial records and informed business decisions.</p>
-              <a href="{% url 'bookeeping_service' %}" class="btn btn-primary">Learn More</a>
-            </div>
+<!-- Services Section -->
+<section id="services" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row ">
+      <!-- Service 1 -->
+      <div class="col-md-4 mb-4 ">
+        <div class="card">
+          <img src="{% static 'images/Bookeeping_service_img.jpg' %}" class="card-img-top" alt="Service 1 Image" style="border-top-left-radius: calc(1.25rem - 1px);
+          border-top-right-radius: calc(1.25rem - 1px);
+          border-bottom-left-radius: calc(1.25rem - 1px);
+          border-bottom-right-radius: calc(1.25rem - 1px);
+          width: 100%; 
+          height: 200px;  /* Set a fixed height for all images */
+          object-fit: cover;">
+          <div class="card-body">
+            <h4 class="card-title fw-bold">Bookkeeping</h4>
+            <p class="card-text">Efficient bookkeeping services ensure accurate financial records and informed business
+              decisions.</p>
+            <a href="{% url 'bookeeping_service' %}" class="btn text-white" style="background-color: #0e4101;">Learn More</a>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="{% static 'images/business_tax_service_img.png' %}" class="card-img-top" alt="Service 2 Image">
-            <div class="card-body">
-              <h4 class="card-title fw-bold">Business Tax</h4>
-              <p class="card-text"> Expert tax consulting and compliance solutions tailored for your business needs.</p>
-              <a href="{% url 'business_tax_service' %}" class="btn btn-primary">Learn More</a>
-            </div>
+      </div>
+      
+      <!-- Service 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="{% static 'images/corporate_tax_new_img.jpg' %}" class="card-img-top" alt="Service 2 Image" style="border-top-left-radius: calc(1.25rem - 1px);
+          border-top-right-radius: calc(1.25rem - 1px);
+          border-bottom-left-radius: calc(1.25rem - 1px);
+          border-bottom-right-radius: calc(1.25rem - 1px);
+          width: 100%; 
+          height: 200px;  /* Set a fixed height for all images */
+          object-fit: cover;">
+          <div class="card-body">
+            <h4 class="card-title fw-bold">Business Tax</h4>
+            <p class="card-text"> Expert tax consulting and compliance solutions tailored for your business needs.</p>
+            <a href="{% url 'business_tax_service' %}" class="btn text-white" style="background-color: #0e4101;">Learn More</a>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="{% static 'images/income_tax_service_img.png' %}" class="card-img-top" alt="Service 3 Image">
-            <div class="card-body">
-              <h4 class="card-title fw-bold">Individual Tax</h4>
-              <p class="card-text"> Expert income tax services provide tailored solutions for maximizing refunds and minimizing liabilities.</p>
-              <a href="{% url 'income_tax_service' %}" class="btn btn-primary">Learn More</a>
-            </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="{% static 'images/income_tax_service_img.jpg' %}" class="card-img-top" alt="Service 3 Image" style="border-top-left-radius: calc(1.25rem - 1px);
+          border-top-right-radius: calc(1.25rem - 1px);
+          border-bottom-left-radius: calc(1.25rem - 1px);
+          border-bottom-right-radius: calc(1.25rem - 1px);
+          width: 100%; 
+          height: 200px;  /* Set a fixed height for all images */
+          object-fit: cover;">
+          <div class="card-body">
+            <h4 class="card-title fw-bold">Individual Tax</h4>
+            <p class="card-text"> Expert income tax services provide tailored solutions for maximizing refunds and
+              minimizing liabilities.</p>
+            <a href="{% url 'income_tax_service' %}" class="btn text-white" style="background-color: #0e4101;">Learn More</a>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="{% static 'images/business_formation_and_ITIN_img.png' %}" class="card-img-top" alt="Service 4 Image">
-            <div class="card-body">
-              <h4 class="card-title fw-bold">Business Formation & ITIN</h4>
-              <p class="card-text"> Expert income tax services provide tailored solutions for maximizing refunds and minimizing liabilities.</p>
-              <a href="{% url 'business_formation_and_ITIN' %}" class="btn btn-primary">Learn More</a>
-            </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="{% static 'images/business_formation_and_ITIN_img.jpg' %}" class="card-img-top"
+            alt="Service 4 Image" style="border-top-left-radius: calc(1.25rem - 1px);
+            border-top-right-radius: calc(1.25rem - 1px);
+            border-bottom-left-radius: calc(1.25rem - 1px);
+            border-bottom-right-radius: calc(1.25rem - 1px);
+            width: 100%; 
+            height: 200px;  /* Set a fixed height for all images */
+            object-fit: cover;">
+          <div class="card-body">
+            <h4 class="card-title fw-bold">Business Formation & ITIN</h4>
+            <p class="card-text"> Expert income tax services provide tailored solutions for maximizing refunds and
+              minimizing liabilities.</p>
+            <a href="{% url 'business_formation_and_ITIN' %}" class="btn text-white" style="background-color: #0e4101;">Learn More</a>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="{% static 'images/sales_and_use_tax_Service.png' %}" class="card-img-top" alt="Service 5 Image">
-            <div class="card-body">
-              <h4 class="card-title fw-bold">Sales and Use Tax Services</h4>
-              <p class="card-text"> Expert Sales tax services provide personalized solutions from taxability analysis to sales tax compliance</p>
-              <a href="{% url 'sales_and_use_tax_Service' %}" class="btn btn-primary">Learn More</a>
-            </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="{% static 'images/sales_and_use_tax_Service.jpg' %}" class="card-img-top" alt="Service 5 Image" style="border-top-left-radius: calc(1.25rem - 1px);
+          border-top-right-radius: calc(1.25rem - 1px);
+          border-bottom-left-radius: calc(1.25rem - 1px);
+          border-bottom-right-radius: calc(1.25rem - 1px);
+          width: 100%; 
+          height: 200px;  /* Set a fixed height for all images */
+          object-fit: cover;">
+          <div class="card-body">
+            <h4 class="card-title fw-bold">Sales and Use Tax Services</h4>
+            <p class="card-text"> Expert Sales tax services provide personalized solutions from taxability analysis to
+              sales tax compliance</p>
+            <a href="{% url 'sales_and_use_tax_Service' %}" class="btn text-white" style="background-color: #0e4101;">Learn More</a>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <style>
-    .collaboration-container {
-      background-color: #f4f4f4;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .collaboration-container h2 {
-      color: #333;
-      text-align: center;
-    }
-    .collaboration-container p {
-      color: #555;
-      font-size: 1.2em;
-      text-align: center;
-    }
-    .company-logos {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    .company-logos img {
-      max-width: 150px;
-      height: auto;
-    }
-  </style>
-   <!-- About Us Section -->
-   <section class="about-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="collaboration-container">
-            <h2>Our Collaboration with QuickTax LLC Arizona</h2>
-            <p>We are pleased to announce our strategic partnership with QuickTax LLC Arizona to deliver expert financial solutions. Together, 
-              we are dedicated to providing accurate, reliable, and timely accounting and tax services that meet the unique needs of our clients</p>
-            
-            <div class="company-logos">
-              <img src="{% static 'images/logo.png' %}" alt="Your Company Logo">
-              <img src="{% static 'images/logo.png' %}" alt="QuickTax LLC Arizona Logo">
-            </div>
+  </div>
+</section>
+
+<style>
+  .collaboration-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .collaboration-container h2 {
+    color: #333;
+    text-align: center;
+  }
+
+  .collaboration-container p {
+    color: #555;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .company-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .company-logos img {
+    max-width: 150px;
+    height: auto;
+  }
+</style>
+<!-- About Us Section -->
+<section class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="collaboration-container" style="background-color: #d8d8d8;">
+          <h2>Our Collaboration with QuickTax LLC Arizona</h2>
+          <p>We are pleased to announce our strategic partnership with QuickTax LLC Arizona to deliver expert financial
+            solutions. Together,
+            we are dedicated to providing accurate, reliable, and timely accounting and tax services that meet the
+            unique needs of our clients</p>
+
+          <div class="company-logos">
+            <img src="{% static 'images/logo.jpg' %}" alt="Your Company Logo">
+            <img src="{% static 'images/arizona_logo.jpg' %}" alt="QuickTax LLC Arizona Logo">
           </div>
-
-
         </div>
+
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
-  {% endblock %}
+{% endblock %}
