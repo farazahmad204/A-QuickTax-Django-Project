@@ -86,6 +86,16 @@
       /* Remove the border */
       /* Optionally, you can add other styles here */
     }
+
+    .textimg {
+  background-image: url("{% static 'images/bg_logo.png' %}"); /* Use Django static URL for the image */
+  background-size: contain; /* Adjust image to cover the text area fully */
+  -webkit-text-fill-color: transparent; /* Make text transparent */
+  -webkit-background-clip: text; /* Clip background to text */
+  
+ 
+}
+
   </style>
 </head>
 
