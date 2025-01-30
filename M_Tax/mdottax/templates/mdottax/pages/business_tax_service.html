@@ -1,90 +1,123 @@
-
-
 {% extends './base.html' %}
 
 {% load static %}
 
 {% block title %} 
-A-QuickTax Business Tax Service    
-                
+Business Tax Services | Tax Planning & Preparation for LLC, Corporations & Non-Profits - A-QuickTax
 {% endblock %}
 
-{% block content%}
+{% block meta %}
+  <meta name="description" content="A-QuickTax offers expert business tax services, including tax preparation for LLCs, corporations, and non-profits. Save time, stay compliant, and reduce your tax burden. Contact us today!" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxService",
+    "name": "A-QuickTax",
+    "description": "Expert business tax services, including tax preparation for LLCs, corporations, and non-profits.",
+    "telephone": "+1-234-567-890",
+    "email": "mailto:admin@aquicktax.com",
+    "url": "https://www.aquicktax.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Tax St.",
+      "addressLocality": "Taxville",
+      "addressRegion": "TX",
+      "postalCode": "75001",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+{% endblock %}
 
-  <!-- Services Section -->
-  <section class="services-section">
-    <div class="container">
-      <div class="row">
-        <div class="col  my-5">
-          <h3 class="fs-1 fw-bold animated slideInDown">Business Tax Services</h3>
-        </div>
+{% block content %}
+
+<!-- Services Section -->
+<section class="services-section">
+  <div class="container">
+    <div class="row">
+      <div class="col my-5">
+        <h1 class="fs-1 fw-bold animated slideInDown">Business Tax Services</h1>
       </div>
     </div>
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-lg-6">
-          <p>Navigating the complexities of <strong>business taxes</strong> is essential for maintaining financial health and ensuring compliance. At <strong>A-QuickTax</strong>, we offer comprehensive <strong>Business Tax services</strong> to help streamline your tax obligations and optimize your financial strategies.</p>
+  </div>
+  
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-lg-6">
+        <p>Navigating the complexities of <strong>business taxes</strong> is essential for maintaining financial health and ensuring compliance. At <strong>A-QuickTax</strong>, we offer comprehensive <strong>Business Tax services</strong> to help streamline your tax obligations and optimize your financial strategies.</p>
         
-          <p>Our team of experienced <strong>tax professionals</strong> provides personalized tax planning and preparation services tailored to your business needs. Whether you're a sole proprietor, LLC, corporation, or non-profit, we ensure your business remains tax-efficient and compliant with federal and state tax laws, allowing you to focus on growth and profitability.</p>
+        <p>Our team of experienced <strong>tax professionals</strong> provides personalized tax planning and preparation services tailored to your business needs. Whether you're a sole proprietor, LLC, corporation, or non-profit, we ensure your business remains tax-efficient and compliant with federal and state tax laws, allowing you to focus on growth and profitability.</p>
         
-          <p>Contact us today to learn more about how our expert <strong>Business Tax services</strong> can reduce your tax burden and improve your overall financial strategy.</p>
+        <p>Contact us today to learn more about how our expert <strong>Business Tax services</strong> can reduce your tax burden and improve your overall financial strategy.</p>
         
-          <div class="container border">
-            <div class="row">
-              <div class="col-lg-12">
-                <h2>Our <strong>Business Tax Preparation</strong> Services</h2>
-        
-                <table class="pricing-table">
-                  <thead>
-                    <tr>
-                      <th>Service</th>
-                      <th>Turnaround Time</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="highlight">Tax Preparation Fee - LLC, C/S Corp, Non-Profit, Trust</td>
-                      <td>1-5 Days</td>
-                    </tr>
-                    <!-- Add more rows for additional services if needed -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="row my-5">
-              <div class="col-lg-12">
-                <ul>
-                  <li><strong>Sole Proprietorship</strong> and Single Member LLC Tax Filing</li>
-                  <li><strong>Partnership</strong> Tax Preparation</li>
-                  <li><strong>Corporation</strong> Tax Filing (C-Corp & S-Corp)</li>
-                  <li><strong>Non-Profit</strong> and Trust Tax Preparation</li>
-                  <li><strong>IRS Tax Filing</strong> and Compliance Services</li>
-                </ul>
-              </div>
+        <div class="container border">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>Our <strong>Business Tax Preparation</strong> Services</h2>
+              <table class="pricing-table">
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Turnaround Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="highlight">Tax Preparation Fee - LLC, C/S Corp, Non-Profit, Trust</td>
+                    <td>1-5 Days</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>        
-        <div class="col-lg-6">
-          <img src="{% static 'images/corporate_tax_new_img.jpg' %}" class="d-block w-100 h-50 blurred-bg" alt="...">
+          
+          <div class="row my-5">
+            <div class="col-lg-12">
+              <ul>
+                <li><strong>Sole Proprietorship</strong> and Single Member LLC Tax Filing</li>
+                <li><strong>Partnership</strong> Tax Preparation</li>
+                <li><strong>Corporation</strong> Tax Filing (C-Corp & S-Corp)</li>
+                <li><strong>Non-Profit</strong> and Trust Tax Preparation</li>
+                <li><strong>IRS Tax Filing</strong> and Compliance Services</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>        
+      
+      <div class="col-lg-6">
+        <img src="{% static 'images/corporate_tax_new_img.jpg' %}" class="d-block w-100 h-50 blurred-bg" alt="Business Tax Preparation Services for Corporations and LLCs" />
       </div>
     </div>
-    <div class="container text-bg-secondary p-3">
-      <div class="row">
-        <div class="col-12">
-          <p class="highlight text-center">
-            <strong>Get Started Today:</strong> Ready to take the stress out of managing your finances?
-            <a  class="btn btn-dark" href="mailto:admin@aquicktax.com?subject=Inquiry%20about%20services&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.">Contact us via email</a>
-            or Call us 
-            <a  class="btn btn-dark" href="https://wa.me/0923291974637" target="_blank">Chat with us on WhatsApp!</a> 
-            or send a Query,our team will contact you!
-            <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> 
-            today to schedule a consultation and learn more.
-          </p>
-        </div>
+  </div>
+
+  <!-- Call to Action Section -->
+  <div class="container text-bg-secondary p-3">
+    <div class="row">
+      <div class="col-12">
+        <p class="highlight text-center">
+          <strong>Get Started Today:</strong> Ready to take the stress out of managing your finances?
+          <a class="btn btn-dark" href="mailto:admin@aquicktax.com?subject=Inquiry%20about%20services&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.">Contact us via email</a>
+          or Call us 
+          <a class="btn btn-dark" href="https://wa.me/0923291974637" target="_blank">Chat with us on WhatsApp!</a> 
+          or send a Query, our team will contact you!
+          <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> 
+          today to schedule a consultation and learn more.
+        </p>
       </div>
     </div>
+  </div>
 
-  </section>
+  <!-- FAQ Section -->
+  <div class="faq-section my-5">
+    <h3>Frequently Asked Questions about Business Tax Services</h3>
+    <ul>
+      <li><strong>What are the benefits of tax filing for LLCs?</strong> - LLCs enjoy specific tax advantages. We ensure you leverage the best strategy for your business.</li>
+      <li><strong>How do I file taxes for a non-profit organization?</strong> - Our experts guide non-profits through the complex tax filing process to ensure compliance and maximize deductions.</li>
+      <li><strong>What is the difference between an S-Corp and a C-Corp tax filing?</strong> - We can help you understand which tax structure is most beneficial for your corporation.</li>
+    </ul>
+  </div>
 
-  {% endblock %}
+</section>
+
+{% endblock %}

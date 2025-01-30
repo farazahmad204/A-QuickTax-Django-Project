@@ -2,75 +2,112 @@
 
 {% load static %}
 
-
 {% block title %} 
-A-QuickTax about us     
-                
+A-QuickTax About Us     
 {% endblock %}
 
 {% block content%}
 
-  <!-- About Us Section -->
-  <section class="about-section my-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="container  my-3">
-            <h1>About Us</h1>
-            <p>At <strong>A-QuickTax</strong>, we understand that managing finances can be overwhelming, especially
-              for small businesses. That's where we come in. Our expert bookkeeping services are tailored to meet the
-              unique needs of small businesses, providing you with peace of mind and allowing you to focus on what you
-              do best – running your business.</p>
+<style>
+  /* Responsive Design Adjustments */
+  @media (max-width: 767px) {
+    .about-section .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
-            <h2>Why Choose Us?</h2>
-            <ol>
-              <li><strong>Expertise:</strong> Our team consists of experienced professionals who specialize in small
-                business bookkeeping. We understand the intricacies of managing finances for small businesses and are
-                committed to helping you succeed.</li>
-              <li><strong>Customized Solutions:</strong> We don't believe in one-size-fits-all solutions. Instead, we
-                take the time to understand your business and tailor our services to meet your specific needs and
-                budget.</li>
-              <li><strong>Accuracy and Reliability:</strong> With us, you can rest assured that your financial records
-                are accurate and up-to-date. We use the latest technology and best practices to ensure the reliability
-                of our services.</li>
-              <li><strong>Cost-Effective:</strong> We offer competitive pricing plans designed to fit within your
-                budget. Our goal is to provide high-quality bookkeeping services at an affordable price, helping you
-                save both time and money.</li>
-            </ol>
+    .about-section h1 {
+      font-size: 1.8rem;
+    }
 
-            <h2>Our Services</h2>
-            <ul>
-              <li><strong>Bookkeeping:</strong> We handle all aspects of your bookkeeping, including recording
-                transactions, reconciling accounts, and generating financial reports.</li>
-              <li><strong>Payroll Services:</strong> Let us take care of your payroll processing, ensuring timely and
-                accurate payments to your employees.</li>
-              <li><strong>Tax Preparation:</strong> Our tax experts can help you navigate the complexities of tax
-                season, maximizing deductions and minimizing liabilities.</li>
-              <li><strong>Financial Consulting:</strong> Need advice on financial planning or budgeting? Our team is
-                here to help you make informed decisions for your business.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-6 my-5">
-          <img src="{% static 'images/logo.jpg' %}" class="d-block w-100 h-100 blurred-bg" alt="...">
+    .about-section h2 {
+      font-size: 1.5rem;
+    }
+
+    .about-section ol, .about-section ul {
+      padding-left: 20px;
+    }
+
+    .about-section ol li, .about-section ul li {
+      font-size: 1rem;
+    }
+
+    .about-section .col-lg-6 img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .about-section .highlight {
+      font-size: 1rem;
+    }
+
+    .about-section .btn {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .about-section h1 {
+      font-size: 2rem;
+    }
+
+    .about-section h2 {
+      font-size: 1.7rem;
+    }
+
+    .about-section ol li, .about-section ul li {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+
+<!-- About Us Section -->
+<section class="about-section my-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="container my-3">
+          <h1>About Us</h1>
+          <p>At <strong>A-QuickTax</strong>, we understand that managing finances can be overwhelming, especially for small businesses. That's where we come in. Our expert bookkeeping services are tailored to meet the unique needs of small businesses, providing you with peace of mind and allowing you to focus on what you do best – running your business.</p>
+
+          <h2>Why Choose Us?</h2>
+          <ol>
+            <li><strong>Expertise:</strong> Our team consists of experienced professionals who specialize in small business bookkeeping. We understand the intricacies of managing finances for small businesses and are committed to helping you succeed.</li>
+            <li><strong>Customized Solutions:</strong> We don't believe in one-size-fits-all solutions. Instead, we take the time to understand your business and tailor our services to meet your specific needs and budget.</li>
+            <li><strong>Accuracy and Reliability:</strong> With us, you can rest assured that your financial records are accurate and up-to-date. We use the latest technology and best practices to ensure the reliability of our services.</li>
+            <li><strong>Cost-Effective:</strong> We offer competitive pricing plans designed to fit within your budget. Our goal is to provide high-quality bookkeeping services at an affordable price, helping you save both time and money.</li>
+          </ol>
+
+          <h2>Our Services</h2>
+          <ul>
+            <li><strong>Bookkeeping:</strong> We handle all aspects of your bookkeeping, including recording transactions, reconciling accounts, and generating financial reports.</li>
+            <li><strong>Payroll Services:</strong> Let us take care of your payroll processing, ensuring timely and accurate payments to your employees.</li>
+            <li><strong>Tax Preparation:</strong> Our tax experts can help you navigate the complexities of tax season, maximizing deductions and minimizing liabilities.</li>
+            <li><strong>Financial Consulting:</strong> Need advice on financial planning or budgeting? Our team is here to help you make informed decisions for your business.</li>
+          </ul>
         </div>
       </div>
-    </div>
-    <div class="container text-bg-secondary p-3">
-      <div class="row">
-        <div class="col-12">
-          <p class="highlight text-center">
-            <strong>Get Started Today:</strong> Ready to take the stress out of managing your finances?
-            <a  class="btn btn-dark" href="mailto:admin@aquicktax.com?subject=Inquiry%20about%20services&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.">Contact us via email</a>
-            or Call us 
-            <a  class="btn btn-dark" href="https://wa.me/0923291974637" target="_blank">Chat with us on WhatsApp!</a> 
-            or send a Query,our team will contact you!
-            <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> 
-            today to schedule a consultation and learn more.
-          </p>
-        </div>
+      <div class="col-lg-6 my-5">
+        <img src="{% static 'images/logo.jpg' %}" class="d-block w-100 h-100 blurred-bg" alt="A-QuickTax Logo">
       </div>
     </div>
-  </section>
+  </div>
 
-  {% endblock %}
+  <div class="container text-bg-secondary p-3">
+    <div class="row">
+      <div class="col-12">
+        <p class="highlight text-center">
+          <strong>Get Started Today:</strong> Ready to take the stress out of managing your finances?
+          <a class="btn btn-dark" href="mailto:admin@aquicktax.com?subject=Inquiry%20about%20services&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.">Contact us via email</a>
+          or Call us 
+          <a class="btn btn-dark" href="https://wa.me/0923291974637" target="_blank">Chat with us on WhatsApp!</a> 
+          or send a Query, our team will contact you!
+          <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> today to schedule a consultation and learn more.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

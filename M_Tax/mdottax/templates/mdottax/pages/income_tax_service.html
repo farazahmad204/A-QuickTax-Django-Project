@@ -2,40 +2,59 @@
 
 {% load static %}
 
-
-{% block title %} 
-A-QuickTax Income Tax Service   
-                
+{% block title %}
+Income Tax Services | A-QuickTax – Expert Tax Filing for U.S. Expats and Citizens
 {% endblock %}
 
-{% block content%}
+{% block meta %}
+  <meta name="description" content="A-QuickTax offers expert Income Tax Services for U.S. expats, U.S. citizens, and Green Card holders. We help you navigate tax filings and maximize deductions." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Income Tax Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "A-QuickTax",
+      "url": "https://www.aquicktax.com/income_tax_service",
+      "logo": "https://www.aquicktax.com/static/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/aquicktax",
+        "https://www.twitter.com/aquicktax"
+      ]
+    },
+    "description": "Income Tax services for U.S. expats, citizens, and Green Card holders, ensuring efficient filing and maximization of tax savings."
+  }
+  </script>
+{% endblock %}
 
+{% block content %}
 
   <!-- Services Section -->
   <section class="services-section">
     <div class="container">
       <div class="row">
-        <div class="col  my-5">
-          <h3 class="fs-1 fw-bold animated slideInDown">Income Tax Services</h3>
+        <div class="col my-5">
+          <h1 class="fs-1 fw-bold animated slideInDown">Income Tax Services</h1>
         </div>
       </div>
     </div>
     <div class="container my-5">
       <div class="row">
         <div class="col-lg-6">
-          <p>Navigating the complexities of <strong>income taxes</strong> is essential for financial health and compliance. At <strong>A-QuickTax</strong>, we specialize in helping <strong>U.S. expats</strong>, <strong>U.S. citizens</strong>, and <strong>Green Card holders</strong> with their income tax filings, regardless of where they reside. As a U.S. citizen or Green Card holder, you are required to file an annual tax return, reporting your worldwide income if you meet the minimum filing thresholds.</p>
+          <p>Managing <strong>income taxes</strong> as a U.S. expat, citizen, or Green Card holder can be complex, but at <strong>A-QuickTax</strong>, we specialize in simplifying the process for you. Whether you're living abroad or within the U.S., we offer expert services to help you stay compliant and reduce your tax burden.</p>
           
-          <p>For many expats, tax preparation can seem daunting, but don't worry. With the right expertise, most expats end up paying little to no taxes when their returns are prepared correctly, taking advantage of all available tax savings and deductions. We ensure that all available benefits, like <strong>Foreign Earned Income Exclusion</strong> and <strong>Foreign Tax Credit</strong>, are applied to minimize your tax liability.</p>
-        
-          <p>In addition to general expat filings, you also have a U.S. tax filing requirement if you have <strong>income from U.S. sources</strong> or were engaged in a trade or business in the United States during the calendar year, even if no income was generated, or if the income is exempt from U.S. tax under a tax treaty.</p>
-        
-          <p>Contact us today to learn more about how our <strong>Income Tax Services</strong> can simplify your filing process and reduce your tax burden.</p>
-        
+          <p>As a U.S. citizen or Green Card holder, you're required to file an annual tax return, reporting your worldwide income if you meet the filing thresholds. But don’t worry, our team ensures that you take full advantage of tax savings like the <strong>Foreign Earned Income Exclusion</strong> and <strong>Foreign Tax Credit</strong>, which can reduce or eliminate your tax liability.</p>
+
+          <p>If you have income from U.S. sources or were engaged in a business in the U.S., you may also have filing requirements, even if you didn't generate taxable income. Our team is well-equipped to guide you through the most efficient tax strategy.</p>
+
+          <p>Contact us today to learn more about how our <strong>Income Tax Services</strong> can help reduce your tax burden and streamline your filing process.</p>
+
           <div class="container border">
             <div class="row">
               <div class="col-lg-12">
                 <h2>Our <strong>Income Tax Preparation</strong> Services</h2>
-        
+
                 <table class="pricing-table">
                   <thead>
                     <tr>
@@ -45,7 +64,7 @@ A-QuickTax Income Tax Service
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="highlight"><strong>Individual Tax</strong> - Resident and Non-Resident Filings</td>
+                      <td class="highlight"><strong>Individual Tax</strong> – Resident and Non-Resident Filings</td>
                       <td>1-5 Days</td>
                     </tr>
                     <!-- Add more rows for additional services if needed -->
@@ -53,8 +72,9 @@ A-QuickTax Income Tax Service
                 </table>
               </div>
             </div>
+
             <div class="row my-5">
-              <h1>Forms Prepared With Your Tax Return</h1>
+              <h2>Forms Prepared With Your Tax Return</h2>
               <div class="col-lg-12">
                 <ul>
                   <li><i class="fas fa-file-alt"></i> <strong>Individual Federal Forms 1040</strong> and 1040NR (A, EZ, or X, as needed)</li>
@@ -77,9 +97,8 @@ A-QuickTax Income Tax Service
         </div>
         
         <div class="col-lg-6">
-          <img src="{% static 'images/income_tax_service_img.jpg' %}" class="d-block w-100 h-50 blurred-bg" alt="...">
-          <img src="{% static 'images/_income_tax_service_img.jpg' %}" class="d-block w-100 h-50 blurred-bg" alt="...">
-          
+          <img src="{% static 'images/income_tax_service_img.jpg' %}" class="d-block w-100 h-50 blurred-bg" alt="Income Tax Service">
+          <img src="{% static 'images/_income_tax_service_img.jpg' %}" class="d-block w-100 h-50 blurred-bg" alt="Tax Filing Assistance">
         </div>
       </div>
     </div>
@@ -88,11 +107,11 @@ A-QuickTax Income Tax Service
       <div class="row">
         <div class="col-12">
           <p class="highlight text-center">
-            <strong>Get Started Today:</strong> Ready to take the stress out of managing your finances?
-            <a  class="btn btn-dark" href="mailto:admin@aquicktax.com?subject=Inquiry%20about%20services&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.">Contact us via email</a>
+            <strong>Get Started Today:</strong> Ready to take the stress out of managing your taxes?
+            <a class="btn btn-dark" href="mailto:admin@aquicktax.com?subject=Inquiry%20about%20services&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.">Contact us via email</a>
             or Call us 
-            <a  class="btn btn-dark" href="https://wa.me/0923291974637" target="_blank">Chat with us on WhatsApp!</a> 
-            or send a Query,our team will contact you!
+            <a class="btn btn-dark" href="https://wa.me/0923291974637" target="_blank">Chat with us on WhatsApp!</a> 
+            or send a Query, our team will contact you!
             <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> 
             today to schedule a consultation and learn more.
           </p>
@@ -101,4 +120,4 @@ A-QuickTax Income Tax Service
     </div>
   </section>
 
-  {% endblock %}
+{% endblock %}

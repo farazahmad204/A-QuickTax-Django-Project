@@ -1,96 +1,88 @@
-
-
 {% extends './base.html' %}
-
 {% load static %}
 
-
 {% block title %} 
-A-QuickTax Bookeeping Service     
-                
+Professional Bookkeeping Services | A-QuickTax - Expert Accounting Solutions
 {% endblock %}
 
-{% block content%}
+{% block content %}
 
- 
-
-  <!-- Services Section -->
-  <section class="services-section">
-    <div class="container">
-      <div class="row">
-        <div class="col  my-5">
-          <h3 class="fs-1 fw-bold animated slideInDown">Bookeeping</h3>
-        </div>
+<!-- Services Section -->
+<section class="services-section">
+  <div class="container">
+    <div class="row">
+      <div class="col my-5">
+        <h1 class="fs-1 fw-bold animated slideInDown">Professional Bookkeeping Services</h1>
       </div>
     </div>
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-lg-6">
-          <p>Whether you're launching a start-up, managing a small business, or running an established company, our professional <strong>bookkeeping services</strong> provide the support you need for financial success. We offer expert bookkeeping solutions tailored to your business needs, ensuring accurate and timely financial records. Our team of qualified, seasoned <strong>bookkeepers</strong> and <strong>accounting professionals</strong> is committed to delivering high-quality services. Even if you have an in-house bookkeeper, our specialized team can complement your efforts by offering advanced expertise and insights into the latest accounting standards and <strong>GAAP compliance</strong>.</p>
+  </div>
+  
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-lg-6">
+        <p>Whether you’re a start-up, a growing small business, or an established company, <strong>A-QuickTax</strong> offers expert <strong>bookkeeping services</strong> designed to streamline your financial operations and ensure accurate, timely financial records. Our team of experienced <strong>bookkeepers</strong> and <strong>accounting professionals</strong> specialize in delivering high-quality services tailored to your business needs, helping you manage finances efficiently while staying compliant with industry standards, including <strong>GAAP compliance</strong>.</p>
         
-          <p>We utilize cutting-edge accounting software such as QuickBooks, Peachtree, Sage, Xero, ERP, and other locally developed software to streamline your financial operations. Our goal is to provide cost-effective bookkeeping services that reduce your overhead costs, improve efficiency, and ensure that your financial records are up-to-date and compliant with industry standards. </p>
+        <p>We use advanced accounting software like QuickBooks, Xero, Peachtree, Sage, ERP, and other tools to optimize your bookkeeping processes. Our goal is to provide cost-effective solutions that reduce overhead, enhance your cash flow management, and maintain financial accuracy and compliance with the latest accounting standards.</p>
+
+        <p>Discover how our professional <strong>bookkeeping services</strong> can help you grow your business by ensuring your finances are well-managed, your financial statements are accurate, and your cash flow is optimized.</p>
         
-          <p>Contact us today to discover how our professional <strong>bookkeeping services</strong> can help streamline your business finances, improve cash flow management, and ensure long-term financial success.</p>
+        <div class="container border">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>Our Comprehensive <strong>Bookkeeping and Accounting Services</strong></h2>
         
-          <div class="container border">
-            <div class="row">
-              <div class="col-lg-12">
-                <h2>Our Comprehensive Bookkeeping and Accounting Services</h2>
-        
-                <table class="pricing-table">
-                  <thead>
-                    <tr>
-                      <th>Service</th>
-                      <th>Turnaround Time</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="highlight">Financial Statements, Bookkeeping, Reconciliations, Inventory Management, Fixed Asset Register</td>
-                      <td>1-5 Days</td>
-                    </tr>
-                    <!-- Add more rows for additional services if needed -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="row my-5">
-              <div class="col-lg-12">
-                <ul>
-                  <li><strong>Bookkeeping Services</strong></li>
-                  <li>Reconciliations</li>
-                  <li>Preparation of Financial Statements</li>
-                  <li>Payroll Management</li>
-                  <li>Inventory Management</li>
-                  <li>Fixed Asset Register</li>
-                  <li><strong>Financial Reporting</strong></li>
-                </ul>
-              </div>
+              <table class="pricing-table">
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Turnaround Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="highlight">Financial Statements, Bookkeeping, Reconciliations, Inventory Management, Fixed Asset Register</td>
+                    <td>1-5 Days</td>
+                  </tr>
+                  <!-- Add more rows for additional services if needed -->
+                </tbody>
+              </table>
             </div>
           </div>
-        
-        </div>        
-        <div class="col-lg-6">
-          <img src="{% static 'images/Bookeeping_service_img.jpg' %}" class="d-block w-100 h-50 blurred-bg" alt="...">
+          <div class="row my-5">
+            <div class="col-lg-12">
+              <ul>
+                <li><strong>Bookkeeping Services:</strong> Accurate recording of all financial transactions.</li>
+                <li><strong>Reconciliations:</strong> Bank and credit card reconciliation to ensure your records match your statements.</li>
+                <li><strong>Financial Statement Preparation:</strong> We prepare balance sheets, profit & loss statements, and cash flow reports.</li>
+                <li><strong>Payroll Management:</strong> Managing payroll calculations, tax filings, and compliance.</li>
+                <li><strong>Inventory Management:</strong> We track and manage your inventory for optimal business operations.</li>
+                <li><strong>Fixed Asset Register:</strong> Manage and track your company's assets for depreciation and tax purposes.</li>
+                <li><strong>Financial Reporting:</strong> In-depth analysis of financial data for better decision-making.</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>        
+      
+      <div class="col-lg-6">
+        <img src="{% static 'images/Bookeeping_service_img.jpg' %}" class="d-block w-100 h-50 blurred-bg" alt="Bookkeeping Services - A-QuickTax">
       </div>
     </div>
-    <div class="container text-bg-secondary p-3">
-      <div class="row">
-        <div class="col-12">
-          <p class="highlight text-center">
-            <strong>Get Started Today:</strong> Ready to take the stress out of managing your finances?
-            <a  class="btn btn-dark" href="mailto:admin@aquicktax.com?subject=Inquiry%20about%20services&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services.">Contact us via email</a>
-            or Call us 
-            <a  class="btn btn-dark" href="https://wa.me/0923291974637" target="_blank">Chat with us on WhatsApp!</a> 
-            or send a Query,our team will contact you!
-            <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> 
-            today to schedule a consultation and learn more.
-          </p>
-        </div>
+  </div>
+  
+  <div class="container text-bg-secondary p-3">
+    <div class="row">
+      <div class="col-12">
+        <p class="highlight text-center">
+          <strong>Get Started Today:</strong> Take the first step toward streamlined financial management with our expert bookkeeping services.
+          <a class="btn btn-dark" href="mailto:admin@aquicktax.com?subject=Inquiry%20about%20Bookkeeping%20Services&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20bookkeeping%20services.">Contact us via email</a> 
+          or <a class="btn btn-dark" href="https://wa.me/0923291974637" target="_blank">Chat with us on WhatsApp!</a> 
+          or send us a query, and our team will get back to you promptly. 
+          <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> today to schedule a consultation and learn more.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
- 
-  {% endblock %}
+{% endblock %}
