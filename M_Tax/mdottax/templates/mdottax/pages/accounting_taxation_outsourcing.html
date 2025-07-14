@@ -1,0 +1,76 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title %} 
+Accounting & Taxation Outsourcing for U.S Business | A-QuickTax - Expert U.S. Tax and Legal Solutions
+{% endblock %}
+
+{% block content %}
+
+<!-- Services Section -->
+<section class="services-section">
+  <div class="container">
+    <div class="row">
+      <div class="col my-5">
+        <h1 class="fs-1 fw-bold animated slideInDown">Accounting & Taxation Outsourcing for U.S Business Service</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+   <div class="row">
+  <div class="col-lg-6">
+    <p>At <strong class="textimg text-white" style="font-size: 1.5em;">A-QuickTax</strong>, we provide expert <strong>accounting and taxation sourcing services</strong> tailored for U.S. businesses, startups, and foreign-owned companies. Our solutions help you stay compliant with federal and state tax laws while optimizing your financial strategy. We take the complexity out of U.S. tax compliance so you can focus on growing your business.</p>
+
+    <p>Running a business in the U.S. requires efficient financial oversight and accurate tax reporting. Our dedicated team offers comprehensive <strong>outsourced accounting and tax services</strong>, including bookkeeping, payroll processing, and IRS-compliant tax filing. Whether you're a new entrepreneur or a foreign national expanding into the U.S. market, we help ensure your financial operations are fully aligned with regulatory standards.</p>
+
+    <p>From navigating multi-state tax requirements to managing IRS filings, our <strong>accounting and taxation experts</strong> are here to simplify your obligations. We also offer guidance on tax deductions, credits, and entity-specific compliance strategies to reduce liabilities and improve cash flow, giving your business a competitive edge.</p>
+
+    <div class="container border">
+      <div class="row my-3">
+        <div class="col-lg-12">
+          <h2>Our Comprehensive <strong>Accounting & Tax Services</strong></h2>
+          <ul>
+            <li><strong>Bookkeeping & Financial Reporting:</strong> Accurate tracking of all business transactions and preparation of monthly financial statements to ensure fiscal clarity and decision-making confidence.</li>
+            <li><strong>Payroll Tax Services:</strong> We handle federal and state payroll tax filings, ensuring your employees and contractors are paid on time and in compliance with employment laws.</li>
+            <li><strong>Federal & State Tax Filings:</strong> Complete support with corporate, partnership, or individual tax returns, including multi-state tax filings and estimated tax payments.</li>
+            <li><strong>Sales Tax Compliance:</strong> We help you register, file, and stay compliant with U.S. sales tax laws, no matter where your customers are located.</li>
+            <li><strong>Outsourced CFO Services:</strong> Strategic financial planning, cash flow forecasting, and tax optimization for growth-stage and international businesses.</li>
+          </ul>
+
+          <h2>Why Choose Our <strong>Tax Sourcing Solutions</strong></h2>
+          <ul>
+            <li><strong>IRS Compliance Assurance:</strong> We ensure that your filings, documentation, and deductions meet current U.S. tax regulations and audit standards.</li>
+            <li><strong>Tailored Tax Strategy:</strong> Every business is different. We develop customized tax plans based on your structure, industry, and growth goals.</li>
+            <li><strong>Year-Round Support:</strong> Our team is available year-round—not just during tax season—to provide proactive advice and answer your financial questions.</li>
+            <li><strong>Expertise for Foreign-Owned Entities:</strong> We help international entrepreneurs meet U.S. accounting and tax requirements without the hassle.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6">
+    <img src="{% static 'images/_old_business_formation_and_ITIN_img.png' %}" class="d-block w-100 h-50 blurred-bg" alt="Accounting and Taxation Services for U.S. Businesses - A-QuickTax">
+  </div>
+</div>
+
+  </div>
+
+  <div class="container text-bg-secondary p-3">
+    <div class="row">
+      <div class="col-12">
+        <p class="highlight text-center">
+         <strong>Get Started Today:</strong> Ready to streamline your accounting and stay compliant with U.S. tax laws? Contact us for expert assistance with outsourced accounting, tax filing, and financial compliance services.
+          <a class="btn btn-dark" href="mailto:admin@aquicktax.com?subject=Inquiry%20about%20Business%20Formation%20or%20ITIN%20Services&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20business%20formation%20or%20ITIN%20services.">Contact us via email</a> 
+          or <a class="btn btn-dark" href="https://wa.me/0923291974637" target="_blank">Chat with us on WhatsApp!</a> 
+          or send a query, and our team will contact you promptly. 
+          <a class="btn btn-dark" href="{% url 'contact_us' %}">Contact us</a> today to schedule a consultation and learn more.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{% endblock %}

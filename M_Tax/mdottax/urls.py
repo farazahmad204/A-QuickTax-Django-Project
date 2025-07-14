@@ -21,6 +21,8 @@ path('income_tax_service',views.income_tax_service, name='income_tax_service'),
 path('business_formation_and_ITIN',views.business_formation_and_ITIN, name='business_formation_and_ITIN'),
 
 
+path('accounting_taxation_outsourcing',views.accounting_taxation_outsourcing, name='accounting_taxation_outsourcing'),
+
 path('sales_and_use_tax_Service',views.salestax, name='sales_and_use_tax_Service'),
 
 

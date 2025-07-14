@@ -54,6 +54,8 @@ A-QuickTax Consultation
                 aria-label="Slide 4"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
                 aria-label="Slide 5"></button><!-- Add this -->
+                 <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                aria-label="Slide 6"></button> -->
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -99,15 +101,29 @@ A-QuickTax Consultation
                   </p>
                 </div>
               </div>
-              <div class="carousel-item">
+              <!-- <div class="carousel-item">
                 <!-- Show image only on larger screens (desktop, tablet) -->
-                <img src="{% static 'images/old_income_tax_service_img.png' %}"
+                <!-- <img src="{% static 'images/old_income_tax_service_img.png' %}"
                   class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
                 <div class="carousel-caption d-none d-md-block text-success" style="background-color: #0e4101;">
                   <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Business Formation and ITIN</h3>
                   <p class="fs-5" style="color: #ddf0f6;">Expert services provide tailored solutions for maximizing
                     refunds and minimizing liabilities.
                     <a href="{% url 'business_formation_and_ITIN' %}" class="btn btn-light me-2">Learn More</a>
+                    <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on
+                      WhatsApp!</a>
+                  </p>
+                </div>
+              </div> --> -->
+              <div class="carousel-item">
+                <!-- Show image only on larger screens (desktop, tablet) -->
+                <img src="{% static 'images/old_income_tax_service_img.png' %}"
+                  class="d-none d-lg-block d-md-block w-100 blurred-bg" alt="...">
+                <div class="carousel-caption d-none d-md-block text-success" style="background-color: #0e4101;">
+                  <h3 class="fs-1 fw-bold animated slideInDown" style="color: #ddf0f6;">Accounting & Taxation Outsourcing for U.S Business</h3>
+                  <p class="fs-5" style="color: #ddf0f6;">Expert services provide tailored solutions for maximizing
+                    refunds and minimizing liabilities.
+                    <a href="{% url 'accounting_taxation_outsourcing' %}" class="btn btn-light me-2">Learn More</a>
                     <a class="btn btn-secondary me-2" href="https://wa.me/0923291974637" target="_blank">Call us on
                       WhatsApp!</a>
                   </p>
@@ -207,7 +223,7 @@ A-QuickTax Consultation
       </div>
 
       <!-- Service 4 -->
-      <div class="col-md-4 mb-4">
+      <!-- <div class="col-md-4 mb-4">
         <div class="card">
           <img src="{% static 'images/business_formation_and_ITIN_img.jpg' %}" class="card-img-top"
             alt="Service 4 Image" style="border-top-left-radius: calc(1.25rem - 1px);
@@ -222,6 +238,26 @@ A-QuickTax Consultation
             <p class="card-text"> Expert income tax services provide tailored solutions for maximizing refunds and
               minimizing liabilities.</p>
             <a href="{% url 'business_formation_and_ITIN' %}" class="btn text-white" style="background-color: #0e4101;">Learn More</a>
+          </div>
+        </div>
+      </div> -->
+
+
+         <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="{% static 'images/business_formation_and_ITIN_img.jpg' %}" class="card-img-top"
+            alt="Service 4 Image" style="border-top-left-radius: calc(1.25rem - 1px);
+            border-top-right-radius: calc(1.25rem - 1px);
+            border-bottom-left-radius: calc(1.25rem - 1px);
+            border-bottom-right-radius: calc(1.25rem - 1px);
+            width: 100%; 
+            height: 200px;  /* Set a fixed height for all images */
+            object-fit: cover;">
+          <div class="card-body">
+            <h4 class="card-title fw-bold">Accounting & Taxation Outsourcing for U.S Business</h4>
+            <p class="card-text"> Expert income tax services provide tailored solutions for maximizing refunds and
+              minimizing liabilities.</p>
+            <a href="{% url 'accounting_taxation_outsourcing' %}" class="btn text-white" style="background-color: #0e4101;">Learn More</a>
           </div>
         </div>
       </div>
@@ -285,15 +321,17 @@ A-QuickTax Consultation
     <div class="row">
       <div class="col-lg-12">
         <div class="collaboration-container" style="background-color: #d8d8d8;">
-          <h2>Our Collaboration with QuickTax LLC Arizona</h2>
-          <p>We are pleased to announce our strategic partnership with QuickTax LLC Arizona to deliver expert financial
-            solutions. Together,
-            we are dedicated to providing accurate, reliable, and timely accounting and tax services that meet the
-            unique needs of our clients</p>
+          <h2>A-QUICKTAX LLC Florida</h2>
+           <p>
+    <strong>A-QUICKTAX LLC</strong> is a registered 
+    <strong>Florida Limited Liability Company (LLC)</strong>, proudly serving clients with professionalism and integrity.
+  </p>
+  <p>
+    We are committed to providing reliable and accurate tax and financial services tailored to meet your needs.
+  </p>
 
           <div class="company-logos">
             <img src="{% static 'images/logo.jpg' %}" alt="Your Company Logo">
-            <img src="{% static 'images/arizona_logo.jpg' %}" alt="QuickTax LLC Arizona Logo">
           </div>
         </div>
 

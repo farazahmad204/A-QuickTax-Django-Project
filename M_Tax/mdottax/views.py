@@ -39,6 +39,11 @@ def business_formation_and_ITIN(request):
     return render(request,'mdottax/pages/business_formation_and_ITIN.html')
 
 
+def accounting_taxation_outsourcing(request):
+
+    return render(request,'mdottax/pages/accounting_taxation_outsourcing.html')
+
+
 
 def home(request):
 

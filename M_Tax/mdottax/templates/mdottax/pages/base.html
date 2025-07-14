@@ -88,12 +88,10 @@
     }
 
     .textimg {
-  background-image: url("{% static 'images/bg_logo.png' %}"); /* Use Django static URL for the image */
+  background-image: url("{% static 'images/bg_logo.PNG' %}"); /* Use Django static URL for the image */
   background-size: contain; /* Adjust image to cover the text area fully */
   -webkit-text-fill-color: transparent; /* Make text transparent */
   -webkit-background-clip: text; /* Clip background to text */
-  
- 
 }
 
   </style>
@@ -191,7 +189,8 @@
                           <li><a class="dropdown-item" href="{% url 'bookeeping_service' %}">Bookkeeping</a></li>
                           <li><a class="dropdown-item" href="{% url 'business_tax_service' %}">Business Tax</a></li>
                           <li><a class="dropdown-item" href="{% url 'income_tax_service' %}">Income Tax</a></li>
-                          <li><a class="dropdown-item" href="{% url 'business_formation_and_ITIN' %}">Business Formation & ITIN </a></li>
+                          <!-- <li><a class="dropdown-item" href="{% url 'business_formation_and_ITIN' %}">Business Formation & ITIN </a></li> -->
+                          <li><a class="dropdown-item" href="{% url 'accounting_taxation_outsourcing' %}">Accounting & Taxation Outsourcing for U.S Business</a></li>
                           <li><a class="dropdown-item" href="{% url 'sales_and_use_tax_Service' %}">Sales and Use Tax Services </a></li>
                       </ul>
                   </li>
@@ -242,12 +241,13 @@
           <h4>Connect With Us</h4>
           <ul class="list-unstyled">
             <li>
-              <p>A-QuickTax </p>
+              <p>A-QUICKTAX LLC Florida</p>
               <h5 style="color: #a3d2f0;">
                 <!-- </pstyle> <i class="fas fa-map-marker-alt "></i> 123 Main Street
                 City, State, ZIP</h5> -->
               <p>Email: admin@aquicktax.com</p>
               <p>Phone:+1 (623) 526-6769</p>
+              <p ><strong class="text-white">Business Address:</strong><br>7901 4th St N, STE 20090<br>St. Petersburg, FL 33720, USA</p>
             </li>
             <li >
               <a class="text-white" href="https://www.facebook.com/profile.php?id=61571631929090" style="color: #3b5998;"><i class="fab fa-facebook-f text-white">&nbsp;</i>Follow us on facebook </a>
@@ -284,7 +284,7 @@
         </div>-->
       </div>
       <hr>
-      <p class="text-center">&copy; 2024 A-QuickTax. All rights reserved.</p>
+      <p class="text-center">&copy; 2025 A-QuickTax LLC Florida. All rights reserved.</p>
     </div>
   </footer>
 
